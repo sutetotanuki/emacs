@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: gradient
+# key: gradient
+# --
+background-image: -webkit-linear-gradient(top, ${1:top} 0%, ${2.bottom} 100%);
+background-image: -ms-linear-gradient(top, $1 0%, $2 100%);
+background-image: -o-linear-gradient(top, $1 0%, $2 100%);

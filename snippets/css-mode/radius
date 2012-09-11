@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: radius
+# --
+-moz-border-radius: ${1:pixel}px;
+-webkit-border-radius: $1px;
+-khtml-border-radius: $1px;
+border-radius: $1px;

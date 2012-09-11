@@ -1,0 +1,12 @@
+*.dat
+auto-save-list
+el-get/*
+!el-get/recipes
+opt
+tramp
+.DS_Store
+
+# for emacs
+*~
+\#*
+.\#*

@@ -1,0 +1,7 @@
+(:name auto-complete-new
+       :description "The most intelligent auto-completion extension."
+       :type github
+       :pkgname "auto-complete/auto-complete"
+       :depends (popup-new fuzzy-new))
+
+(global-auto-complete-mode 1)
