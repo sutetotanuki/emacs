@@ -2,6 +2,6 @@
        :description "Moz's original js2-mode. arigato-"
        :type github
        :pkgname "mooz/js2-mode"
-       :afetr (progn
+       :after (progn
                 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
-                ))
+                 ))
