@@ -1,6 +1,6 @@
 (:name ruby-mode-trunk
-       :type svn
-       :url "http://svn.ruby-lang.org/repos/ruby/trunk"
+       :type github
+       :pkgname "ruby/ruby"
        :load-path ("misc")
        :after (progn
                 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
