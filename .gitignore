@@ -5,6 +5,7 @@ el-get/*
 opt
 tramp
 .DS_Store
+history
 
 # for emacs
 *~
