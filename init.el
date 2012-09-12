@@ -141,14 +141,12 @@
 ;; (savehist-mode 1)
 ;; (setq-default save-place t)
 ;; (require 'saveplace)
-;; (global-set-key (kbd "C-h") 'delete-backward-char)
 ;; (setq gc-cons-threshold (* 10 gc-cons-threshold))
 ;; (setq message-log-max 10000)
 ;; (setq enable-recursive-minibuffers t)
 ;; (setq use-dialog-box nil)
 ;; (defalias 'message-box 'message)
 ;; (setq history-length 1000)
-;; (setq echo-keystrokes 0.1)
 
 ;; (defadvice abort-recursive-edit (before minibuffer-save activate)
 ;;   (when (eq (selected-window) (active-minibuffer-window))
@@ -368,18 +366,6 @@
 ;; ;;   (define-key js2-mode-map "\C-m" nil)
 ;; ;;   (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode)))
 
-
-;; ;;rsense
-;; ;(setq rsense-home "/home/nishidama/opt/rsense-0.3")
-;; ;(add-to-list 'load-path (concat rsense-home "/etc"))
-;; ;(require 'rsense)
-
-;; ;; anything
-;; (defvar org-directory "")
-;; (require 'anything-startup)
-;; (add-to-list 'anything-sources 'anything-c-source-emacs-commands)
-;; (define-key global-map (kbd "C-o") 'anything)
-
 ;; (require 'sequential-command-config)
 ;; (sequential-command-setup-keys)
 
@@ -445,13 +431,6 @@
 ;; (setq org-remember-templates
 ;;       '(("Note" ?n "** %?\r   %i\n  %a\n   %t" nil "Inbox")
 ;;         ("Todo" ?t "** TODO %?\n   %i\n   %a\n   %t" nil "Inbox")))
-;; ;; あーるぶいえむ rvm
-;; (require 'rvm)
-;; (rvm-use-default)
-
-;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; ;; trampl.el win scp みたいにやるやつ
-;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; ;; 矩形選択
 ;; (cua-mode t)
@@ -486,13 +465,6 @@
 ;; ;; 釣り合いのとれる括弧をハイライトする
 ;; (show-paren-mode 1)
 ;; (find-function-setup-keys)
-
-;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; ;; scss
-;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; (autoload 'scss-mode "scss-mode")
-;; (setq scss-compile-at-save nil) ;;自動コンパイルはやめたほうがいい on rails
-;; (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 
 ;; ;;; cssモード
 ;; (setq cssm-indent-level 2)
