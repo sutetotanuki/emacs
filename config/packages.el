@@ -51,3 +51,8 @@
 
 ;;; js2-mode
 (load "config/packages/js2-mode")
+
+;;; sequential-command (C-a C-aしたら先頭にいくやつ)
+(el-get 'sync '(sequential-command-config))
+(require 'sequential-command-config)
+(sequential-command-setup-keys)
