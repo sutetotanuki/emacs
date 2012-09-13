@@ -6,6 +6,7 @@ opt
 tramp
 .DS_Store
 history
+config/local.el
 
 # for emacs
 *~
