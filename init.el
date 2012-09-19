@@ -62,6 +62,9 @@
 ;; キーストロークをエコーエリアに素早く表示する
 (setq echo-keystrokes 0.1)
 
+;; 最初のwelcome画面を出さない
+(setq inhibit-startup-message t)
+
 
 ;;; 音
 ;; ビープ音、画面フラッシュなし
