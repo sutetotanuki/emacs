@@ -17,3 +17,10 @@
 
 ;; 画面の透過設定
 (set-frame-parameter nil 'alpha 90)
+
+;; Apple scripts
+(defun chrome-reload()
+  (interactive)
+  (shell-command "osascript ~/scripts/chrome_ctrl.scpt reload"))
+
+(global-set-key (kbd "C-c <f5>") 'chrome-reload)
