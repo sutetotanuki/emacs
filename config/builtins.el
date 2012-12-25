@@ -4,7 +4,11 @@
 (load "config/builtins/cc-mode")
 
 
-;;; c-modee
+;;; c-mode
+(load "config/builtins/c-mode")
+
+
+;;; c-mode
 (add-hook 'c-mode-hook
           (lambda ()
             (define-key c-mode-map (kbd "C-M-h") 'backward-kill-word)))
