@@ -70,3 +70,6 @@
 
 ;;; yaml-mode
 (el-get 'sync '(yaml-mode))
+
+;;; jade-mode
+(el-get 'sync '(jade-mode))

@@ -1,0 +1,11 @@
+(:name jade-mode
+       :type github
+       :pkgname "brianc/jade-mode"
+       :after (progn
+                (add-to-list 'auto-mode-alist '("\\.jade$". jade-mode))
+                (add-hook
+                 'jade-mode
+                 '(lambda ()
+                    (define-key jade-mode-map (kbd "C-M-h") 'backward-kill-word))
+                 )
+                ))
