@@ -73,3 +73,6 @@
 
 ;;; jade-mode
 (el-get 'sync '(jade-mode))
+
+;;; lua-mode
+(load "config/packages/lua-mode")
