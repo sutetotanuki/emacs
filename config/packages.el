@@ -76,3 +76,13 @@
 
 ;;; lua-mode
 (load "config/packages/lua-mode")
+
+;;; gtags
+(autoload 'gtags-mode "gtags" "" t)
+(setq gtags-mode-hook
+      '(lambda ()
+         (local-set-key (kbd "M-t") 'gtags-find-tag)
+         (local-set-key (kbd "M-r") 'gtags-find-rtag)
+         (local-set-key (kbd "M-s") 'gtags-find-symbol)
+         (local-set-key (kbd "C-M-r") 'gtags-pop-stack)))
+

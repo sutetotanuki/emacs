@@ -15,4 +15,8 @@
 
    ;; Camel Case でも分解して編集する
    (subword-mode 1)
+
+   ;; gtags-modeを有効にする。
+   (gtags-mode 1)
+   (gtags-make-complete-list)
    ))

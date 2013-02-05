@@ -24,3 +24,11 @@
   (shell-command "osascript ~/scripts/chrome_ctrl.scpt reload"))
 
 (global-set-key (kbd "C-c <f5>") 'chrome-reload)
+
+
+;; dockからとか普通のAppとして立ち上げたときに shell のpathを引き継がないので読み込む
+(let ((path-str
+       (replace-regexp-in-string
+        "\n+$" "" (shell-command-to-string "echo $PATH"))))
+  (setenv "PATH" path-str)
+  (setq exec-path (nconc (split-string path-str ":") exec-path '("/usr/local/bin")))) ; /usr/local/binだけはだめだった orz

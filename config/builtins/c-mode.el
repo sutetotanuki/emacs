@@ -5,4 +5,5 @@
  (lambda ()
    (setq indent-tabs-mode nil)
    (setq c-basic-offset 4)
+   (define-key c-mode-map (kbd "C-c c") 'compile)
  ))
