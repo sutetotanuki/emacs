@@ -1,0 +1,7 @@
+(:name feature-mode
+       :description "Mode for cucumber.el."
+       :type github
+       :pkgname "michaelklishin/cucumber.el"
+       :after (progn
+                (add-to-list 'auto-mode-alist '("\\.feature$" . feature-mode))
+                 ))
