@@ -105,3 +105,13 @@
           (lambda ()
             (require 'rename-sgml-tag)
             (define-key sgml-mode-map (kbd "C-c C-r") 'rename-sgml-tag)))
+
+
+;;; smart-compile(ruby を評価出来るようにするやつ)
+(el-get 'sync '(smart-compile))
+(define-key ruby-mode-map (kbd "C-c c") 'smart-compile)
+
+
+;; xmlpfilter (rubyで# => の後に評価した結果を表示するやつ)
+(require 'rcodetools)
+(define-key ruby-mode-map (kbd "C-c C-d") 'xmp)
