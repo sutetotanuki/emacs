@@ -86,3 +86,5 @@
          (local-set-key (kbd "M-s") 'gtags-find-symbol)
          (local-set-key (kbd "C-M-r") 'gtags-pop-stack)))
 
+;;: feature-mode
+(el-get 'sync '(feature-mode))
