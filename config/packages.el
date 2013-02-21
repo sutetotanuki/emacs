@@ -110,7 +110,11 @@
 ;;; smart-compile(ruby を評価出来るようにするやつ)
 (el-get 'sync '(smart-compile))
 (define-key ruby-mode-map (kbd "C-c c") 'smart-compile)
-(define-key c++-mode-map (kbd "C-c c") 'smart-compile)
+(add-hook
+ 'c++-mode-map
+ (lambda ()
+   (define-key c++-mode-map (kbd "C-c c") 'smart-compile)
+   ))
 
 
 ;; xmlpfilter (rubyで# => の後に評価した結果を表示するやつ)
