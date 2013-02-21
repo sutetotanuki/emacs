@@ -1,0 +1,7 @@
+(:name slim-mode
+       :description "Mode for slim(template engine)."
+       :type github
+       :pkgname "slim-template/emacs-slim"
+       :after (progn
+                (add-to-list 'auto-mode-alist '("\\.slim$" . slim-mode))
+                 ))
