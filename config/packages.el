@@ -111,7 +111,7 @@
 (el-get 'sync '(smart-compile))
 (define-key ruby-mode-map (kbd "C-c c") 'smart-compile)
 (add-hook
- 'c++-mode-map
+ 'c++-mode-hook
  (lambda ()
    (define-key c++-mode-map (kbd "C-c c") 'smart-compile)
    ))
@@ -124,3 +124,8 @@
 
 ;; slim-mode
 (el-get 'sync '(slim-mode))
+
+
+;; less-css-mode
+(el-get 'sync '(less-css-mode))
+
