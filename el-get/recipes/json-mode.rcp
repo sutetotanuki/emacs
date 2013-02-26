@@ -1,0 +1,7 @@
+(:name json-mode
+       :description "Major mode for editing JSON files"
+       :type github
+       :pkgname "joshwnj / json-mode"
+       :after (progn
+                (add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
+                 ))
