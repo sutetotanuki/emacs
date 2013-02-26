@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: nsel
+# --
+-moz-user-select: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+$0
