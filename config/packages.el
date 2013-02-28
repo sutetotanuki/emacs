@@ -110,8 +110,25 @@
 ;;; smart-compile(ruby を評価出来るようにするやつ)
 (el-get 'sync '(smart-compile))
 (define-key ruby-mode-map (kbd "C-c c") 'smart-compile)
+(add-hook
+ 'c++-mode-hook
+ (lambda ()
+   (define-key c++-mode-map (kbd "C-c c") 'smart-compile)
+   ))
 
 
 ;; xmlpfilter (rubyで# => の後に評価した結果を表示するやつ)
 (require 'rcodetools)
 (define-key ruby-mode-map (kbd "C-c C-d") 'xmp)
+
+
+;; slim-mode
+(el-get 'sync '(slim-mode))
+
+
+;; less-css-mode
+(el-get 'sync '(less-css-mode))
+
+
+;; json-mode
+(el-get 'sync '(json-mode))

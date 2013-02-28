@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: lcss
+# --
+link rel="stylesheet" type="text/css" href="${1:path_to_css}"
+$0

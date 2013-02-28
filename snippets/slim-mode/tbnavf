@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: tbnavf
+# --
+.navbar
+  .navbar-inner
+    .container-fluid
+$1
