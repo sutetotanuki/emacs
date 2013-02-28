@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: dsm
+# --
+define_singleton_method(:$1) do
+  $0
+end
