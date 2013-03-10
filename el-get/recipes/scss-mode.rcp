@@ -1,0 +1,7 @@
+(:name scss-mode
+       :description "Mode for scss."
+       :type github
+       :pkgname "antonj/scss-mode"
+       :after (progn
+                (add-to-list 'auto-mode-alist '("\\.scss$" . scss-mode))
+                 ))

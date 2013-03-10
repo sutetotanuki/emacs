@@ -130,5 +130,9 @@
 (el-get 'sync '(less-css-mode))
 
 
+;; scss-mode
+(el-get 'sync '(scss-mode))
+
+
 ;; json-mode
 (el-get 'sync '(json-mode))

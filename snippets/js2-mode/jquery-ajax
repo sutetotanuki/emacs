@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: jquery-ajax
+# key: $ajax
+# --
+$.ajax({
+  url: "${1:url}",
+  type: "${2:method}",
+  data: ${3:data},
+  success: function(data, textStatus, xhr) {
+     $0
+  }
+});
+

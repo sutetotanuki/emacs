@@ -8,6 +8,10 @@
 (load "config/builtins/c-mode")
 
 
+;;; c++-mode
+(load "config/builtins/c++-mode")
+
+
 ;;; c-mode
 (add-hook 'c-mode-hook
           (lambda ()

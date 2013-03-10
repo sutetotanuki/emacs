@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: instance_variable_get
+# key: ivg
+# --
+instance_variable_get(:"@#{${1:name}}")
