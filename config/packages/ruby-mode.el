@@ -1,6 +1,5 @@
 (el-get 'sync '(ruby-mode-trunk))
 (el-get 'sync '(ruby-block))
-;; (el-get 'sync '(rvm))
 
 ;;; 基本設定
 ;; 括弧の位置を行頭の近くにする TODO: 出来たら行頭にする
@@ -31,11 +30,6 @@
 (ruby-block-mode t)
 ;; ミニバッファに表示し, かつ, オーバレイする.
 (setq ruby-block-highlight-toggle t)
-
-
-;;; rvm
-;; (require 'rvm)
-;; (rvm-use-default)
 
 
 ;;=======================================================
