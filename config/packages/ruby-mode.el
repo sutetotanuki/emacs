@@ -1,6 +1,6 @@
 (el-get 'sync '(ruby-mode-trunk))
 (el-get 'sync '(ruby-block))
-(el-get 'sync '(rvm))
+;; (el-get 'sync '(rvm))
 
 ;;; 基本設定
 ;; 括弧の位置を行頭の近くにする TODO: 出来たら行頭にする
@@ -34,8 +34,8 @@
 
 
 ;;; rvm
-(require 'rvm)
-(rvm-use-default)
+;; (require 'rvm)
+;; (rvm-use-default)
 
 
 ;;=======================================================
