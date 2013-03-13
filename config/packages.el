@@ -132,6 +132,11 @@
 
 ;; scss-mode
 (el-get 'sync '(scss-mode))
+(add-hook
+ 'scss-mode-hook
+ (lambda ()
+   (setq scss-compile-at-save nil)
+   ))
 
 
 ;; json-mode

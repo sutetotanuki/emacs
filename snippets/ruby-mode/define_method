@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: define_method
+# key: dm
+# group: definitions
+# --
+define_method(${1:method}) do
+  $0
+end
