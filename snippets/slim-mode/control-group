@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: control-group
+# key: ctrlg
+# group: twitter-bootstrap
+# --
+.control-group
+  label.control-label for="${1:ControlName}" ${2:label}
+.controls
+  input type="text"

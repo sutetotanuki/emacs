@@ -57,11 +57,11 @@
 (require 'sequential-command-config)
 (sequential-command-setup-keys)
 
-;;; redo+(redoをできるようにする)
-(el-get 'sync '(redo+))
-(require 'redo+)
-(global-set-key (kbd "C-M-/") 'redo)
-(setq undo-no-redo t)    ;; 過去のundoがredoされないようにする
+;;; undo-tree(redoもできるようにする)
+(el-get 'sync '(undo-tree))
+(require 'undo-tree)
+(global-undo-tree-mode t)
+(global-set-key (kbd "M-/") 'undo-tree-redo)
 
 ;; 大量のundoに耐えられるようにする
 (setq undo-limit 600000) 
