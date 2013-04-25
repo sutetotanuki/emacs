@@ -52,6 +52,9 @@
 ;;; js2-mode
 (load "config/packages/js2-mode")
 
+;;; scss-mode
+(load "config/packages/scss-mode")
+
 ;;; sequential-command (C-a C-aしたら先頭にいくやつ)
 (el-get 'sync '(sequential-command-config))
 (require 'sequential-command-config)
@@ -130,14 +133,11 @@
 (el-get 'sync '(less-css-mode))
 
 
-;; scss-mode
-(el-get 'sync '(scss-mode))
-(add-hook
- 'scss-mode-hook
- (lambda ()
-   (setq scss-compile-at-save nil)
-   ))
-
-
 ;; json-mode
 (el-get 'sync '(json-mode))
+
+
+;; display-bufferの挙動を変える
+(el-get 'sync '(popwin))
+(setq display-buffer-function 'popwin:display-buffer)
+
