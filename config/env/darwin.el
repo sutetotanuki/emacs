@@ -32,3 +32,14 @@
         "\n+$" "" (shell-command-to-string "echo $PATH"))))
   (setenv "PATH" path-str)
   (setq exec-path (nconc (split-string path-str ":") exec-path '("/usr/local/bin")))) ; /usr/local/binだけはだめだった orz
+
+
+;; 横に分割されるとpathが長いときに端っこ見えないから
+;; *Help*バッファを横分割に強制する
+;; C-t で切り替えられる
+(setq split-height-threshold 0)
+(setq split-width-threshold nil)
+
+
+;; ドロップダウンされたときなどに新しいEmacsでファイルを開かない
+(setq ns-pop-up-frames nil)

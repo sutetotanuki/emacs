@@ -138,6 +138,6 @@
 
 
 ;; display-bufferの挙動を変える
-(el-get 'sync '(popwin))
-(setq display-buffer-function 'popwin:display-buffer)
-
+;; (el-get 'sync '(popwin))
+;; (require 'popwin)
+;; (popwin-mode 1)
