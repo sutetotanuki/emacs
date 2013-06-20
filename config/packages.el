@@ -8,19 +8,18 @@
     (end-of-buffer)
     (eval-print-last-sexp)))
 
+;; ユーザー定義のレシピ
+(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get/recipes")
+
 ;; buildinのレシピ参照
 ; (find-file "~/.emacs.d/el-get/el-get/recipes")
 
 
 ;;; C likeな言語のタブを２タブにする
-;; 
+;;
 ;; なぜかこれしか２タブにする方法が無かった
 ;; (setq c-basic-offset 2)とかだと効かなかった。。。
 (setq-default c-basic-offset 2)
-
-
-;; ユーザー定義のレシピ
-(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get/recipes")
 
 ;;; anything
 (load "config/packages/anything")
@@ -67,7 +66,7 @@
 (global-set-key (kbd "M-/") 'undo-tree-redo)
 
 ;; 大量のundoに耐えられるようにする
-(setq undo-limit 600000) 
+(setq undo-limit 600000)
 (setq undo-strong-limit 900000)
 
 
@@ -110,7 +109,7 @@
             (define-key sgml-mode-map (kbd "C-c C-r") 'rename-sgml-tag)))
 
 
-;;; smart-compile(ruby を評価出来るようにするやつ)
+;; smart-compile(ruby を評価出来るようにするやつ)
 (el-get 'sync '(smart-compile))
 (define-key ruby-mode-map (kbd "C-c c") 'smart-compile)
 (add-hook
