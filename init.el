@@ -68,6 +68,7 @@
 
 ;;; 音
 ;; ビープ音、画面フラッシュなし
+(setq visible-bell t)
 (setq ring-bell-funciton 'ignore)
 
 
@@ -75,6 +76,16 @@
 ;; 正規表現の\の色替え
 (set-face-foreground 'font-lock-regexp-grouping-backslash "green3")
 (set-face-foreground 'font-lock-regexp-grouping-construct "green")
+
+
+;; 行末のスペースに色をつける
+(when (boundp 'show-trailing-whitespace)
+  (setq-default show-trailing-whitespace t))
+(set-face-background 'trailing-whitespace "purple4")
+
+
+;;; Hooks
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 
 ;;===================================================
@@ -140,4 +151,3 @@
 ;;   ;; Your init file should contain only one such instance.
 ;;   ;; If there is more than one, they won't work right.
 ;;  )
-

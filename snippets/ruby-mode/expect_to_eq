@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: expect().to eq()
+# key: ex
+# --
+expect(${1:expression}).to eq(${2:expect})

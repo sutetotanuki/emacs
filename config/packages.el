@@ -127,6 +127,7 @@
 
 ;; slim-mode
 (el-get 'sync '(slim-mode))
+(add-to-list 'ac-modes 'slim-mode)
 
 
 ;; less-css-mode

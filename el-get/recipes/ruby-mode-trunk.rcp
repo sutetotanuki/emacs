@@ -9,6 +9,7 @@
                 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
                 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
                 (add-to-list 'auto-mode-alist '("Guardfile$" . ruby-mode))
+                (add-to-list 'auto-mode-alist '("\\.thor$" . ruby-mode))
                 (add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))
                 (add-hook 'c-mode-hook 'ruby-style-c-mode)
                 (add-hook 'c++mode-hook 'ruby-style-c-mode))

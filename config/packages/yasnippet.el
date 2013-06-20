@@ -29,3 +29,6 @@
 
 ;;; yasnippet有効化
 (yas-global-mode 1)
+
+;;; YASnippetをacの補完候補に
+(add-to-list 'ac-sources 'ac-source-yasnippet)

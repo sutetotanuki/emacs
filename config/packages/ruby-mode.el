@@ -11,10 +11,10 @@
 
 ;; 無意味なスペース(先頭から末尾までスペース)を赤くするのを無効にする
 ;; (ruby-mode時に自動的に on になっている？)
-(add-hook
- 'ruby-mode-hook
- (lambda ()
-   (setq show-trailing-whitespace nil)))
+;; (add-hook
+;;  'ruby-mode-hook
+;;  (lambda ()
+;;    (setq show-trailing-whitespace nil)))
 
 ;; C-M-h(単語単位のバックスペース)が上書きされてしまうため再定義
 (define-key ruby-mode-map (kbd "C-M-h") 'backward-kill-word)
