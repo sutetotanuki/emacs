@@ -1,7 +1,7 @@
 (el-get 'sync '(ruby-mode-trunk))
 (el-get 'sync '(ruby-block))
 ;; ruby-debugger
-(el-get 'sync '(rdebug))
+(el-get 'sync '(rdebug-github))
 
 
 ;;; 基本設定

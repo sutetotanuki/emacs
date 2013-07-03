@@ -1,0 +1,4 @@
+(:name rdebug-github
+       :type github
+       :pkgname "cldwalker/debugger"
+       :load-path ("emacs"))
