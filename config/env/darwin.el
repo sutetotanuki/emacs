@@ -43,3 +43,5 @@
 
 ;; ドロップダウンされたときなどに新しいEmacsでファイルを開かない
 (setq ns-pop-up-frames nil)
+
+(global-set-key (kbd "C-M-¥") 'indent-region)

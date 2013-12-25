@@ -55,10 +55,16 @@
 (add-hook
  'ruby-mode-hook
  '(lambda ()
-    ;; Don’t want flymake mode for ruby regions in rhtml files
-    (if (not (null buffer-file-name)) (flymake-mode))
-    ;; エラー行で C-c d するとエラーの内容をミニバッファで表示する
-    (define-key ruby-mode-map "\C-cd" 'credmp/flymake-display-err-minibuf)))
+    (unless (or (and (fboundp 'tramp-tramp-file-p)
+                     (tramp-tramp-file-p buffer-file-name))
+                (string-match "sudo:.*" (buffer-file-name)))
+      (flymake-mode)
+      (define-key ruby-mode-map "\C-cd" 'credmp/flymake-display-err-minibuf)))
+     )
+    ;; ;; Don’t want flymake mode for ruby regions in rhtml files
+    ;; (if (not (null buffer-file-name)) (flymake-mode))
+    ;; ;; エラー行で C-c d するとエラーの内容をミニバッファで表示する
+    ;; (define-key ruby-mode-map "\C-cd" 'credmp/flymake-display-err-minibuf)))
 
 (defun credmp/flymake-display-err-minibuf ()
   "Displays the error/warning for the current line in the minibuffer"
