@@ -43,3 +43,10 @@
 
 ;; ドロップダウンされたときなどに新しいEmacsでファイルを開かない
 (setq ns-pop-up-frames nil)
+
+
+;; バックスラッシュを使うショートカットが使えない。。。
+(define-key global-map [?\¥] [?\\])
+(define-key global-map [?\C-¥] [?\C-\\])
+(define-key global-map [?\M-¥] [?\M-\\])
+(define-key global-map [?\C-\M-¥] [?\C-\M-\\])
