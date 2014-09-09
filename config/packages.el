@@ -136,6 +136,10 @@
 ;; json-mode
 (el-get 'sync '(json-mode))
 
+;; coffee-mode
+(el-get 'sync '(coffee-mode))
+(define-key coffee-mode-map (kbd "C-M-h") 'backward-kill-word)
+
 
 ;; display-bufferの挙動を変える
 ;; (el-get 'sync '(popwin))

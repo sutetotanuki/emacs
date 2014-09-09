@@ -23,6 +23,9 @@
 (define-key ruby-mode-map (kbd "C-M-h") 'backward-kill-word)
 
 
+;; マジックコメントの自動挿入を無効化
+(defun ruby-mode-set-encoding () nil)
+
 ;;; ruby-electric(対応するendの自動補完など)
 (require 'ruby-electric)
 (add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
@@ -83,3 +86,8 @@
           )
         )
       (setq count (1- count)))))
+
+; Syntaxチェクがエラーになった時にフリーズするので回避
+(defadvice flymake-post-syntax-check (before flymake-force-check-was-interrupted)
+  (setq flymake-check-was-interrupted t))
+(ad-activate 'flymake-post-syntax-check)
