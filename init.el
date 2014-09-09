@@ -134,9 +134,16 @@
 ;; Emacs client(emacsclientコマンドを有効に)
 ;;===================================================
 (setenv "PATH" (concat (getenv "HOME") "/.rbenv/shims:"
-                       (getenv "HOME") "/.rbenv/bin:" (getenv "PATH")))
+                       (getenv "HOME") "/.rbenv/bin:"
+                       (getenv "HOME") "/.gvm/pkgsets/go1.3.1/bin:"
+                       (getenv "HOME") "/..gvm/pkgsets/go1.3.1/global/bin:"
+                       (getenv "PATH")))
+(setenv "GOPATH" (concat (getenv "HOME") "/.gvm/gos/go1.3.1/bin"))
 (setq exec-path (cons (concat (getenv "HOME") "/.rbenv/shims")
                       (cons (concat (getenv "HOME") "/.rbenv/bin") exec-path)))
+(add-to-list 'exec-path (concat (getenv "HOME") "/.gvm/pkgsets/go1.3.1/bin" ))
+(add-to-list 'exec-path (concat (getenv "HOME") "/.gvm/pkgsets/go1.3.1/global/bin" ))
+(add-to-list 'exec-path (concat (getenv "HOME") "/.gvm/gos/go1.3.1/bin" ))
 
 
 ;; ;;===================================================
