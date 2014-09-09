@@ -45,3 +45,9 @@
 (setq ns-pop-up-frames nil)
 
 (global-set-key (kbd "C-M-¥") 'indent-region)
+
+;; バックスラッシュを使うショートカットが使えない。。。
+(define-key global-map [?\¥] [?\\])
+(define-key global-map [?\C-¥] [?\C-\\])
+(define-key global-map [?\M-¥] [?\M-\\])
+(define-key global-map [?\C-\M-¥] [?\C-\M-\\])
