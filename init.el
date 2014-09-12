@@ -134,6 +134,12 @@
                       (cons (concat (getenv "HOME") "/.rbenv/bin") exec-path)))
 
 
+(defun reload-chrome ()
+  (interactive)
+  (shell-command "osascript ~/.emacs.d/applescript/reload-chrome.scpt"))
+(global-set-key (kbd "C-<f5>") 'reload-chrome)
+
+
 ;; ;;===================================================
 ;; ;; 自動生成で追加されたやつ
 ;; ;;===================================================

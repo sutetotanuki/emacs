@@ -134,7 +134,8 @@
 
 
 ;; json-mode
-(el-get 'sync '(json-mode))
+;;(el-get 'sync '(json-mode))
+
 
 
 ;; display-bufferの挙動を変える
