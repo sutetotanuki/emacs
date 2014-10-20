@@ -1,0 +1,8 @@
+(:name go-autocomplete
+       :description "Autocomplete for go"
+       :type github
+       :load-path ("emacs")
+       :pkgname "nsf/gocode"
+       :after (progn
+                (add-to-list 'auto-mode-alist '("\\.go$" . go-mode))
+                 ))

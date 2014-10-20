@@ -44,6 +44,7 @@
 ;; ドロップダウンされたときなどに新しいEmacsでファイルを開かない
 (setq ns-pop-up-frames nil)
 
+(global-set-key (kbd "C-M-¥") 'indent-region)
 
 ;; バックスラッシュを使うショートカットが使えない。。。
 (define-key global-map [?\¥] [?\\])

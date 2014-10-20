@@ -87,6 +87,11 @@
 ;;; Hooks
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;;===================================================
+;; 作ったelisp
+;;===================================================
+(load "functions")
+
 
 ;;===================================================
 ;; Builtinのパッケージに対する設定
@@ -129,15 +134,30 @@
 ;; Emacs client(emacsclientコマンドを有効に)
 ;;===================================================
 (setenv "PATH" (concat (getenv "HOME") "/.rbenv/shims:"
-                       (getenv "HOME") "/.rbenv/bin:" (getenv "PATH")))
+                       (getenv "HOME") "/.rbenv/bin:"
+                       (getenv "HOME") "/go/bin:"
+                       (getenv "PATH")))
+(setenv "GOPATH" (concat (getenv "HOME") "/go"))
 (setq exec-path (cons (concat (getenv "HOME") "/.rbenv/shims")
                       (cons (concat (getenv "HOME") "/.rbenv/bin") exec-path)))
+(add-to-list 'exec-path (concat (getenv "HOME") "/go/bin" ))
 
 
 (defun reload-chrome ()
   (interactive)
   (shell-command "osascript ~/.emacs.d/applescript/reload-chrome.scpt"))
 (global-set-key (kbd "C-<f5>") 'reload-chrome)
+
+(defun page-down-chrome ()
+  (interactive)
+  (shell-command "osascript ~/.emacs.d/applescript/page-down-chrome.scpt"))
+(global-set-key (kbd "C-<f6>") 'page-down-chrome)
+
+(defun page-up-chrome ()
+  (interactive)
+  (shell-command "osascript ~/.emacs.d/applescript/page-up-chrome.scpt"))
+(global-set-key (kbd "C-<f7>") 'page-up-chrome)
+
 
 
 ;; ;;===================================================

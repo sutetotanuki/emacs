@@ -23,6 +23,9 @@
 (define-key ruby-mode-map (kbd "C-M-h") 'backward-kill-word)
 
 
+;; マジックコメントの自動挿入を無効化
+(defun ruby-mode-set-encoding () nil)
+
 ;;; ruby-electric(対応するendの自動補完など)
 (require 'ruby-electric)
 (add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
@@ -55,10 +58,16 @@
 (add-hook
  'ruby-mode-hook
  '(lambda ()
-    ;; Don’t want flymake mode for ruby regions in rhtml files
-    (if (not (null buffer-file-name)) (flymake-mode))
-    ;; エラー行で C-c d するとエラーの内容をミニバッファで表示する
-    (define-key ruby-mode-map "\C-cd" 'credmp/flymake-display-err-minibuf)))
+    (unless (or (and (fboundp 'tramp-tramp-file-p)
+                     (tramp-tramp-file-p buffer-file-name))
+                (string-match "sudo:.*" (buffer-file-name)))
+      (flymake-mode)
+      (define-key ruby-mode-map "\C-cd" 'credmp/flymake-display-err-minibuf)))
+     )
+    ;; ;; Don’t want flymake mode for ruby regions in rhtml files
+    ;; (if (not (null buffer-file-name)) (flymake-mode))
+    ;; ;; エラー行で C-c d するとエラーの内容をミニバッファで表示する
+    ;; (define-key ruby-mode-map "\C-cd" 'credmp/flymake-display-err-minibuf)))
 
 (defun credmp/flymake-display-err-minibuf ()
   "Displays the error/warning for the current line in the minibuffer"
@@ -77,3 +86,8 @@
           )
         )
       (setq count (1- count)))))
+
+; Syntaxチェクがエラーになった時にフリーズするので回避
+(defadvice flymake-post-syntax-check (before flymake-force-check-was-interrupted)
+  (setq flymake-check-was-interrupted t))
+(ad-activate 'flymake-post-syntax-check)

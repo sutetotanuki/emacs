@@ -1,6 +1,4 @@
 (el-get 'sync '(yasnippet))
-(setq yas/trigger-key "M-q")
-(el-get 'sync '(yasnippet-config))
 
 (global-set-key (kbd "C-x y") 'yas/register-oneshot-snippet)
 (global-set-key (kbd "C-x C-y") 'yas/expand-oneshot-snippet)

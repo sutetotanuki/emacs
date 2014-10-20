@@ -54,6 +54,9 @@
 ;;; scss-mode
 (load "config/packages/scss-mode")
 
+;;; go-mode
+(load "config/packages/go-mode")
+
 ;;; sequential-command (C-a C-aしたら先頭にいくやつ)
 (el-get 'sync '(sequential-command-config))
 (require 'sequential-command-config)
@@ -136,6 +139,10 @@
 ;; json-mode
 ;;(el-get 'sync '(json-mode))
 
+
+;; coffee-mode
+(el-get 'sync '(coffee-mode))
+(define-key coffee-mode-map (kbd "C-M-h") 'backward-kill-word)
 
 
 ;; display-bufferの挙動を変える

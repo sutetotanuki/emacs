@@ -1,0 +1,7 @@
+(:name go-mode-github
+       :description "Mode for slim(template engine)."
+       :type github
+       :pkgname "dominikh/go-mode.el"
+       :after (progn
+                (add-to-list 'auto-mode-alist '("\\.go$" . go-mode))
+                 ))
