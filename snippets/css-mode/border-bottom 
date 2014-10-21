@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: border-bottom
+# key: bor.b
+# --
+border-bottom: ${1:1}px ${2:solid} ${3:#fff};

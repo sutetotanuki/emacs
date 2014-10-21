@@ -11,6 +11,9 @@
 ;;; c++-mode
 (load "config/builtins/c++-mode")
 
+;;; js-mode(JSON開くとjs-modeが使われる)
+(load "config/builtins/js-mode")
+
 
 ;;; c-mode
 (add-hook 'c-mode-hook

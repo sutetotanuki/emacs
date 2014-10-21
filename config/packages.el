@@ -141,7 +141,7 @@
 
 
 ;; json-mode
-;(el-get 'sync '(json-mode))
+;;(el-get 'sync '(json-mode))
 
 ;; coffee-mode
 (el-get 'sync '(coffee-mode))
