@@ -6,7 +6,7 @@
 (set-face-attribute 'default
 		    nil
 		    :family "Ricty"
-		    :height my-screen-font-height)
+		    :height 145)
 
 (set-fontset-font nil
 		  'japanese-jisx0208
