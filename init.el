@@ -28,6 +28,7 @@
 ;; バックアップファイルを作らない
 (setq make-backup-files nil)
 (setq auto-save-default nil)
+(setq create-lockfiles nil)
 (setq backup-inhibited t)
 ;; 終了時にオートセーブファイルを消す
 (setq delete-auto-save-files t)
