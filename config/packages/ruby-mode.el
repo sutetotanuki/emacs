@@ -32,10 +32,10 @@
 
 
 ;;; ruby-block(endに対するdefを表示する)
-(require 'ruby-block)
-(ruby-block-mode t)
-;; ミニバッファに表示し, かつ, オーバレイする.
-(setq ruby-block-highlight-toggle t)
+;; (require 'ruby-block)
+;; (ruby-block-mode t)
+;; ;; ミニバッファに表示し, かつ, オーバレイする.
+;; (setq ruby-block-highlight-toggle t)
 
 
 ;;=======================================================

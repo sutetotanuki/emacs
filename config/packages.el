@@ -131,6 +131,10 @@
 (el-get 'sync '(slim-mode))
 (add-to-list 'ac-modes 'slim-mode)
 
+;; haml-mode
+(el-get 'sync '(haml-mode))
+(add-to-list 'ac-modes 'haml-mode)
+
 
 ;; less-css-mode
 (el-get 'sync '(less-css-mode))
@@ -138,7 +142,6 @@
 
 ;; json-mode
 ;;(el-get 'sync '(json-mode))
-
 
 ;; coffee-mode
 (el-get 'sync '(coffee-mode))

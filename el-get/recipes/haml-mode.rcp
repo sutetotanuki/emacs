@@ -1,0 +1,7 @@
+(:name haml-mode
+       :description "Mode for haml(template engine)."
+       :type github
+       :pkgname "nex3/haml-mode"
+       :after (progn
+                (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
+                 ))
