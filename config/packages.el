@@ -151,6 +151,7 @@
 (load "config/packages/web-mode")
 
 
+
 ;; display-bufferの挙動を変える
 ;; (el-get 'sync '(popwin))
 ;; (require 'popwin)
