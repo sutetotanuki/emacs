@@ -1,5 +1,4 @@
 (el-get 'sync '(yasnippet))
-
 (global-set-key (kbd "C-x y") 'yas/register-oneshot-snippet)
 (global-set-key (kbd "C-x C-y") 'yas/expand-oneshot-snippet)
 (global-set-key (kbd "M-q") 'yas-expand)
@@ -23,7 +22,7 @@
 
 
 ;;; リロードが必要？
-(yas-reload-all)
+;(yas-reload-all)
 
 
 ;;; yasnippet有効化

@@ -1,0 +1,18 @@
+(el-get 'sync 'smartchr)
+(el-get 'sync '(php-mode php-completion php-eldoc))
+(when (require 'php-mode nil t)
+  (defun my/php-mode-hook-function ()
+    (when (require 'php-completion nil t)
+      (php-completion-mode t))
+    (define-key php-mode-map (kbd "M-t") 'phpcmp-complete)
+    (define-key php-mode-map (kbd "C-M-h") 'backward-kill-word)
+    (let ((my/php-offset 4))
+      (setq tab-width my/php-offset
+            c-basic-offset my/php-offset
+            indent-tabs-mode nil)
+      (c-set-offset 'case-label' my/php-offset)
+      (c-set-offset 'arglist-intro' my/php-offset)
+      (c-set-offset 'arglist-cont-nonempty' my/php-offset)
+      (c-set-offset 'arglist-close' 0))
+    t)
+    (add-hook 'php-mode-hook 'my/php-mode-hook-function))

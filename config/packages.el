@@ -57,6 +57,9 @@
 ;;; go-mode
 (load "config/packages/go-mode")
 
+;;; php-mode
+(load "config/packages/php-mode")
+
 ;;; sequential-command (C-a C-aしたら先頭にいくやつ)
 (el-get 'sync '(sequential-command-config))
 (require 'sequential-command-config)
