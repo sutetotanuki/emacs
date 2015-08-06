@@ -7,6 +7,8 @@ tramp
 .DS_Store
 history
 config/local.el
+recentf
+eshell/*
 
 # for emacs
 *~
