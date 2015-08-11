@@ -15,6 +15,7 @@
 (global-set-key (kbd "C-h")   'delete-backward-char)   ; バックスペース
 (global-set-key (kbd "M-g")   'goto-line)              ; 指定行にジャンプ
 (global-set-key (kbd "C-t")   'other-window)           ; ウインドウ移動
+(global-set-key (kbd "C-^")   'find-grep-dired)        ; find-grep
 ;; elispの関数や変数定義をとれるfind-functionのキーバインドを有効に
 (find-function-setup-keys)
 
