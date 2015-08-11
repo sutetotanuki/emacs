@@ -1,0 +1,7 @@
+(:name scala-mode2
+       :description "Mode for scala."
+       :type github
+       :pkgname "hvesalai/scala-mode2"
+       :after (progn
+                (add-to-list 'auto-mode-alist '("\\.scala$" . scala-mode))
+                 ))

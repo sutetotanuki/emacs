@@ -150,6 +150,13 @@
 (el-get 'sync '(coffee-mode))
 (define-key coffee-mode-map (kbd "C-M-h") 'backward-kill-word)
 
+;; scala-mode2
+(el-get 'sync '(scala-mode2))
+
+;; web-mode
+(load "config/packages/web-mode")
+
+
 
 ;; display-bufferの挙動を変える
 ;; (el-get 'sync '(popwin))
